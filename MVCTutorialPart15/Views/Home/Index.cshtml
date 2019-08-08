@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>@ViewBag.MyCustomProperty</h1>    
+</div>
+<div>
+    <ul>
+        @foreach (var item in ViewBag.MyList) {
+            <li>@item</li>
+        }
+    </ul>
+    <ul>
+        @foreach (var item1 in ViewBag.EmployeeList) {
+            <li>@item1.Id</li>
+            <li>@item1.Name</li>
+            <li>@item1.Email</li>
+        }
+    </ul>
+</div>
+

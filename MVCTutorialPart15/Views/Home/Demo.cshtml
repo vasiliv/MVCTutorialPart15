@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Demo";
+}
+
+<h2>Demo</h2>
+
+<h1>@ViewData["myKey"]</h1>
+
+@*Tu downcasts ar mivmartavt, am errors agdebs: CS1579: foreach statement cannot operate 
+on variables of type 'object' because 'object' does not contain a public instance definition for 'GetEnumerator'*@
+
+@foreach (var item in (List<string>)ViewData["myList"]) {
+    <li>@item</li>
+}
